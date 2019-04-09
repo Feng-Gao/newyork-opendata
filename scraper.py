@@ -116,5 +116,4 @@ for p in package_list:
     scraperwiki.sqlite.save(unique_keys=['today','id'],data=package_dict)
 
     print('****************end---'+package_name+'---end****************')
-#close the file
-csv_file.close()
+
