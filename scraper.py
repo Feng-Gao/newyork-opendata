@@ -108,7 +108,7 @@ for p in package_list:
                     'row':package_row,
                     'column':package_column,
                     'avgrating':package_avg_rating,
-                    'numofcomments':package_numberofComments,
+                    'numofcomments':package_numberOfComments,
                     'hidefromcatalog':package_hideFromCatalog,
                     'hidefromdatajson':package_package_hideFromDataJson,   
     }
