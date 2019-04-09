@@ -4,6 +4,7 @@
 #the original purpose of this work is to support the ongoing international city open data index project led by SASS
 
 import requests
+import datetime
 
 result = requests.get('https://data.cityofnewyork.us/data.json')
 package_list = result.json()['dataset']
@@ -89,6 +90,7 @@ for p in package_list:
     print row
     
     package_dict = {
+                    'today':datetime.date.today().strftime("%m/%d/%Y"),
                     'id':package_id,
                     'type':package_type,
                     'displayType':package_displayType,
@@ -111,7 +113,7 @@ for p in package_list:
                     'hidefromdatajson':package_package_hideFromDataJson,   
     }
     
-    scraperwiki.sqlite.save(unique_keys=['id'],data=package_dict)
+    scraperwiki.sqlite.save(unique_keys=['today','id'],data=package_dict)
 
     print('****************end---'+package_name+'---end****************')
 #close the file
