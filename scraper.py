@@ -5,6 +5,7 @@
 
 import requests
 import datetime
+import scraperwiki
 
 result = requests.get('https://data.cityofnewyork.us/data.json')
 package_list = result.json()['dataset']
