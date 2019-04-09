@@ -110,7 +110,7 @@ for p in package_list:
                     'avgrating':package_avg_rating,
                     'numofcomments':package_numberOfComments,
                     'hidefromcatalog':package_hideFromCatalog,
-                    'hidefromdatajson':package_package_hideFromDataJson,   
+                    'hidefromdatajson':package_hideFromDataJson,   
     }
     
     scraperwiki.sqlite.save(unique_keys=['today','id'],data=package_dict)
