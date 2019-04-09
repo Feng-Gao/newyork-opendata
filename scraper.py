@@ -3,9 +3,15 @@
 #a quick and dirty script to scrape/harvest resource-level metadata 
 #the original purpose of this work is to support the ongoing international city open data index project led by SASS
 
+
 import requests
 import datetime
 import scraperwiki
+
+import sys  
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
 
 result = requests.get('https://data.cityofnewyork.us/data.json')
 package_list = result.json()['dataset']
